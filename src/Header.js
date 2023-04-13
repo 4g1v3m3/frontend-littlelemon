@@ -1,8 +1,11 @@
-import Image from "react"
+import logo from "./assets/Logo.svg"
+
 
 const Header = () => {
   return (
-    <Image src=""></Image>
+    <>
+    <img src={logo}></img>
+    </>
   )
 }
 
