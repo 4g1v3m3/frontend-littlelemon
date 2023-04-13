@@ -1,8 +1,10 @@
+import { Routes, Route } from 'react-router';
 import './App.css';
-import About from './content/About';
 import HeroSection from './content/HeroSection';
 import Highlights from './content/Highlights';
 import Testimonials from './content/Testimonials';
+import About from './content/About';
+
 
 const Main = () => {
   return (

@@ -6,7 +6,7 @@ import Nav from "./content/Nav"
 const Header = () => {
   return (
     <div className="Header">
-    <img src={logo}></img>
+    <img src={logo} alt="logo" className="logo"></img>
     <Nav />
     </div>
   )
