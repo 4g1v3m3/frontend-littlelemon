@@ -1,4 +1,4 @@
-import "../App.css"
+import "./styles/Highlights.css"
 
 const Highlights = () => {
   return (

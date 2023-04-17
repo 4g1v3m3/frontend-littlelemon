@@ -1,5 +1,5 @@
-import "../App.css"
-import hero from "../../src/assets/restauranfood.jpg"
+import "./styles/HeroSection.css"
+
 
 const HeroSection = () => {
   return (

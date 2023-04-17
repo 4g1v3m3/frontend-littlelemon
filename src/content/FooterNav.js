@@ -1,4 +1,4 @@
-import "../App.css"
+import "./styles/FooterNav.css"
 
 const FooterNav = () => {
   return (

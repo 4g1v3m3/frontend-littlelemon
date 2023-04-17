@@ -1,4 +1,4 @@
-import "../App.css"
+import "./styles/Home.css"
 import HeroSection from "./HeroSection"
 import Highlights from "./Highlights"
 

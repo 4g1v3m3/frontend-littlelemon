@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { useReducer, useState } from 'react';
-import './App.css';
-import Home from './content/Home';
-import Reservation from './content/Reservation';
+import "./styles/Main.css"
+import Home from './Home';
+import Reservation from './Reservation';
 
 const initializeTimes = () => {
   return [
