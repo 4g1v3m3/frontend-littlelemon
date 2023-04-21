@@ -67,14 +67,19 @@
   font-weight: bold;
   font-size: 16pt;
   width: auto;
-  margin: 2vh;
+  margin: 0px;
   background-color: #f4CE14;
   padding: 10px;
   border-radius: 8px;
-  margin-left: -20px;
 }
 
 .button:active {
   background-color: black;
   color: #EDEFEE;
+}
+
+@media (max-width: 707px) {
+  .hero-section-image {
+    visibility: hidden;
+  }
 }

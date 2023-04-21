@@ -11,7 +11,9 @@
   margin: 0;
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
+
 .logo-container {
   background-color: #EDEFEE;
   padding: 8px;
@@ -31,6 +33,7 @@
   align-items: end;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .footer-logo {
@@ -39,9 +42,34 @@
 
 .copyright {
   margin-bottom: 0px;
+  overflow: hidden;
 }
 
 .footer-info {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .Footer {
+    flex-grow: 1;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+  }
+  .logo-container {
+    visibility: hidden;
+    padding: 0;
+    margin: -50px ;
+  }
+  .footer-info-container {
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .footer-container {
+    justify-content: center;
+    align-items: center;
+  }
 }
