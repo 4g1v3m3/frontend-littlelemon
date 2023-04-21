@@ -7,11 +7,12 @@
   background-image: url("../assets/restaurant.jpg");
   background-repeat: no-repeat;
   height: fit-content;
+  background-size: cover;
 }
 
 .book-header {
   font-family: "Markazi-text";
-  padding-left: 10vw;
+  padding-left: 1fr;
   font-size: 40pt;
   font-weight: 400;
   color: #f4CE14;
@@ -20,33 +21,43 @@
 }
 
 .booking-form {
+  justify-items: center;
   background-color: #495E57;
   display: grid;
   gap: 20px;
   justify-content: center;
   color: #EDEFEE;
   font-size: 18pt;
-  padding: 50px;
-  padding-top: 0px;
   border-radius: 2em;
   width: fit-content;
-  margin-bottom: 10vh;
-  margin-top: 10vh;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  padding-top: 0px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
+.form-input-label {
+  justify-self: left;
+  margin-bottom: -20px;
 }
 
 .form-input-field {
   font-size: 20pt;
+  width: 100%;
 }
 
 .button {
   font-family: "Karla";
   font-weight: bold;
   font-size: 16pt;
-  width: auto;
+  width: fit-content;
   margin: 2vh;
   background-color: #f4CE14;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px black;
 }
 
 .button:active {

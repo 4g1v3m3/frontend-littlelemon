@@ -1,0 +1,40 @@
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 100%;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.footer-nav-item {
+  padding: 8px;
+  padding-left: 20px;
+  font-family: "Karla";
+  color: black;
+  font-weight: bolder;
+  font-size: 10pt;
+  flex-wrap: nowrap;
+  margin-left: 24px;
+}
+
+.footer-nav-item:link {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-nav-item:visited {
+  color: black;
+  text-decoration: none;
+}
+

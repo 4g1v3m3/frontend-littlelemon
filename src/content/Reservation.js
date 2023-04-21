@@ -1,55 +1,113 @@
-import { useReducer, useState } from "react";
+import { useState } from "react";
 import "./styles/Reservation.css";
-import NumericInput from "react-numeric-input";
+import { submitAPI } from "../api";
+import { useNavigate } from "react-router";
+import ConfirmedBooking from "./ConfirmedBooking";
 
-const Reservation = ({ availableOccasions, availableTimes, initializeTimes, updateTimes }) => {
-  const [selectDate, dispatch] = useReducer(updateTimes, initializeTimes);
-  const [value, setValue] = useState(1);
-  const [time, setTime] = useState('17');
-  const [option, setOption] = useState('01');
+const Reservation = (props) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    tel: '',
+    date: '',
+    time: '',
+    persons: '',
+    occasion: '',
+  });
 
-  const handleChangeValue = (newValue) => {
-    setValue(newValue);
-  };
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleChangeTime = (e) => {
-    setTime(e.target.value);
-  };
-
-  const handleOptionChange = (e) => {
-    setOption(e.target.value);
+  const onChangeHandler = (e) => {
+    setFormData(()=>({
+        ...formData,
+        [e.target.name]: e.target.value
+    }))
+    console.log(formData)
+    if (e.target.name === 'date') {
+      props.setSelectedDate(new Date(e.target.value));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("submit", formData);
+    submitAPI(formData);
+    setSubmitted(true);
+    navigate("/confirmedBooking");
   };
 
-  const handleDateChange = (date) => {
-    dispatch(date);
-  };
+  const navigate = useNavigate();
+
 
   return (
     <div className="Reservation">
-      <form className="booking-form" onSubmit={handleSubmit} >
-      <h1 className="book-header">Book now!</h1>
-        <label htmlFor="res-date">Choose date:</label>
-        <input className="form-input-field" type="date" selected={selectDate} onChange={handleDateChange} />
-        <label htmlFor="res-time">Choose time:</label>
-        <select className="form-input-field" id='res-time' value={time} onChange={handleChangeTime}>
-          {availableTimes?.map((item) => (
-            <option key={item.value}>{item.label}</option>
-          ))}
-        </select>
-        <label htmlFor="guests">Number of guests:</label>
-        <NumericInput className="form-input-field" min={0} max={10} value={value} onChange={handleChangeValue} />
-        <label htmlFor="occasion">Occasion:</label>
-        <select className="form-input-field" id="occasion" value={option} onChange={handleOptionChange}>
-          {availableOccasions?.map((item) => (
-            <option key={item.value}>{item.label}</option>
-          ))}
-        </select>
-        <input className="button" type="submit" value="Make Your reservation" />
-      </form>
+        <form className="booking-form" onSubmit={handleSubmit} >
+          <h1 className="book-header">Book now!</h1>
+          <label className="form-input-label" htmlFor="name">Name:</label>
+          <input className="form-input-field" required
+            value={formData.name}
+            id="name"
+            type="text"
+            placeholder="Your Name"
+            name="name"
+            onChange={onChangeHandler}
+          />
+          <label className="form-input-label" htmlFor="tel">Tel:</label>
+          <input className="form-input-field" required
+            value={formData.tel}
+            id="tel"
+            type="tel"
+            placeholder="+1000000"
+            name="tel"
+            onChange={onChangeHandler}
+          />
+          <label className="form-input-label" htmlFor="date">Date:</label>
+          <input className="form-input-field" required
+            value={formData.date}
+            id="date"
+            type="date"
+            name="date"
+            onChange={onChangeHandler}
+          />
+          <label className="form-input-label">Time:</label>
+          <select
+            className="form-input-field" required
+            name="time"
+            id="time-select"
+            onChange={onChangeHandler}>
+            {props.availableTimes.map((i) => {
+              return (<option value={i.value}>{i.label}</option>)
+            })}
+          </select>
+          <label className="form-input-label">Occasion:</label>
+          <select className="form-input-field" required
+            name="occasion"
+            onChange={onChangeHandler}>
+              {props.availableOccasions.map(i => {
+                return (<option>{i.label}</option>
+                )})}
+          </select>
+          <label className="form-input-label">Number od guests:</label>
+          <input className="form-input-field" required
+            value={formData.persons}
+            type="number"
+            name="persons"
+            min="1"
+            max="20"
+            onChange={onChangeHandler}
+          />
+          <button disabled={
+            !formData.name ||
+            !formData.tel ||
+            !formData.persons ||
+            !formData.date
+            }
+            aria-label="On Click"
+            className="button"
+            type="submit">
+              Make your reservation!
+          </button>
+        </form>
+        {submitted && <ConfirmedBooking formData={formData} />}
     </div>
   );
 };

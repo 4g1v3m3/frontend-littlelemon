@@ -2,11 +2,8 @@
 .hero-background {
   display: flex;
   background-color: #495E57;
-  position: absolute;
   top: 80px;
-  left: -1000px;
-  width: 3000px;
-  height: 475px;
+  height: max-content;
   z-index: -1;
 }
 
@@ -16,9 +13,11 @@
   justify-content: space-between;
 }
 
+
 .hero-section-image {
   margin-bottom: -100px;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-right: 50px;
   width: 400px;
   height: 500px;
   background-image: url("../assets/restauranfood.jpg");
@@ -30,6 +29,7 @@
 
 .hero-section {
   width: 40%;
+  margin: 25px;
 }
 
 .hero-title1 {
@@ -37,9 +37,13 @@
   font-family: "markazi-text";
   font-size: 64pt;
   font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .hero-title2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
   color: #EDEFEE;
   font-family: "markazi-text";
   font-size: 40pt;
@@ -51,5 +55,26 @@
   font-family: "Karla";
   font-weight: 700;
   font-size: 18pt;
+
 }
 
+#hero-button {
+  margin-left: 0;
+}
+
+.button {
+  font-family: "Karla";
+  font-weight: bold;
+  font-size: 16pt;
+  width: auto;
+  margin: 2vh;
+  background-color: #f4CE14;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: -20px;
+}
+
+.button:active {
+  background-color: black;
+  color: #EDEFEE;
+}

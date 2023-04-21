@@ -1,0 +1,31 @@
+.ConfirmedBooking {
+  font-family: "Karla";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/restaurant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.confirmation-container {
+  background-color: #495E57;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  color: #EDEFEE;
+  font-size: 18pt;
+
+  width: fit-content;
+
+}
+
+.confirmation-header {
+  font-family: "Markazi-text";
+  font-size: 40pt;
+  font-weight: 400;
+  color: #f4CE14;
+  padding: 0px;
+  margin-bottom: -10px;
+}
