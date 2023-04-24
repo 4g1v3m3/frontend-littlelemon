@@ -1,0 +1,52 @@
+.Login {
+  font-family: "Karla";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/restaurant.jpg");
+  background-repeat: no-repeat;
+  height: fit-content;
+  background-size: cover;
+  height: 756px;
+}
+
+.under-construction-container {
+  margin: 25px;
+  justify-items: center;
+  background-color: #495E57;
+  display: grid;
+  justify-content: center;
+  color: #EDEFEE;
+  font-size: 18pt;
+  border-radius: 2em;
+}
+
+.construction-header {
+  font-family: "Markazi-text";
+  font-size: 40pt;
+  font-weight: 400;
+  color: #f4CE14;
+  padding: 0px;
+  margin-bottom: -10px;
+}
+
+.construction-p {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  text-indent: 1ch;
+}
+
+@media (max-width: 767px) {
+  .Login {
+    height: auto;
+  }
+  .construction-p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .construction-header {
+    text-align: center;
+  }
+}
