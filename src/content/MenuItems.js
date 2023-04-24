@@ -23,6 +23,22 @@ const menuItems = [
     desc: "Sparkling water with lemon and ice is a refreshing drink made with purified carbonated water, fresh lemon, and ice. It's a healthy and hydrating choice with no added sugars or artificial flavors.",
     img: require('../content/assets/menu_item_water.jpg'),
   },
+  {
+    id: 4,
+    category: "starters",
+    name: "Bruchetta",
+    price: "9.00",
+    desc: "Toasted bread topped with fresh, flavorful ingredients. Choose from a variety of toppings, including fresh tomato and mozzarella, roasted red pepper and goat cheese, or prosciutto and balsamic glaze.",
+    img: require('../content/assets/menu_item_bruchetta.jpg'),
+  },
+  {
+    id: 5,
+    category: "desserts",
+    name: "Ice Cream",
+    price: "5.00",
+    desc: "A refreshing and zesty twist on a classic dessert. Made with creamy, high-quality ice cream and infused with fresh lemon zest, this dessert is the perfect balance of sweet and tart.",
+    img: require('../content/assets/menu_item_icecream.jpg'),
+  },
 ]
 
 export default  menuItems

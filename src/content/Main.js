@@ -14,8 +14,6 @@ import Login from './Login';
 
 const Main = () => {
 
-  const dataReceived = formData
-
   const [availableOccasions] = useState([
     { value: '01', label: 'Birthday' },
     { value: '02', label: 'Anniversary' },
@@ -36,7 +34,7 @@ const Main = () => {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/menu' element={<Menu />} />
-        <Route path='/confirmedBooking' element={submitted && <ConfirmedBooking dataReceived={dataReceived}/>} />
+        <Route path='/confirmedBooking' element={<ConfirmedBooking />} />
         <Route path='/reservation' element={<Reservation
           availableOccasions={availableOccasions}
           availableTimes={availableTimes}

@@ -22,6 +22,7 @@
   font-weight: bolder;
   font-size: 20pt;
   flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .nav-item:link {
@@ -107,5 +108,12 @@
   }
   .nav-menu-normal {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-item {
+    padding: 5px;
+    font-size: 18pt;
   }
 }

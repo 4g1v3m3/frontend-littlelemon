@@ -15,6 +15,7 @@ const Reservation = (props) => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [rerender, setRerender] = useState(false);
 
   const onChangeHandler = (e) => {
     setFormData(()=>({
@@ -32,6 +33,7 @@ const Reservation = (props) => {
     console.log("submit", formData);
     submitAPI(formData);
     setSubmitted(true);
+    setRerender(!rerender);
     navigate("/confirmedBooking");
   };
 
@@ -107,7 +109,7 @@ const Reservation = (props) => {
               Make your reservation!
           </button>
         </form>
-        {submitted && <ConfirmedBooking formData={formData} />}
+        {submitted && <ConfirmedBooking formData={formData} rerender={rerender} />}
     </div>
   );
 };

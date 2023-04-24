@@ -18,10 +18,13 @@ const Highlights = () => {
           </div>
       </div>
       <div className="cards-section">
-        {menuItems.map(menuItems => (
-          <Card key={menuItems.id} menuItems={menuItems} />
+        {menuItems
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 3)
+          .map(menuItems => (
+            <Card key={menuItems.id} menuItems={menuItems} />
         ))}
-      </div>
+</div>
     </div>
   )
 }

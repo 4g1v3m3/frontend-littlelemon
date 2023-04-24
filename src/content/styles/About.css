@@ -1,0 +1,49 @@
+.About {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.About > div {
+  flex: 1 1 150px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.about {
+  text-indent: 3ch;
+}
+
+.about::first-letter {
+  font-family: "Karla";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #495E57;
+}
+
+.about-image {
+  width: 400px;
+  margin: 0px;
+  padding: 0px;
+}
+
+@media (max-width: 767px) {
+  .About {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 25px;
+  }
+
+  .about-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+}

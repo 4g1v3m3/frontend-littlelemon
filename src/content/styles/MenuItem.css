@@ -1,24 +1,32 @@
-.card-container {
-  justify-content: center;
-  background-color: #edefee;
+.menu-items-section {
   display: flex;
   flex-direction: column;
-  width: 75%;
+}
+
+.menu-item-container {
+  justify-content: center;
+  background-color: #edefee;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   border-radius: 8px;
   font-family: "Karla";
   margin: 0px;
-  height: 470px;
   margin-bottom: 25px;
+  margin: 25px;
 }
 
-.card-image-container {
+.menu-item-info-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item-image-container {
   border-radius: 8px;
-  height: 200px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.card-info {
+.menu-item-info {
   height: 50px;
   margin: 5px;
   padding: 0px 5px 0px 5px;
@@ -29,7 +37,7 @@
   font-size: medium;
 }
 
-.dish-desc {
+.menu-item-dish-desc {
   margin: 5px;
   padding: 0px 5px 0px 5px;
   height: 200px;
@@ -64,7 +72,7 @@
 }
 
 @media (max-width: 767px) {
-  .card-container {
+  .menu-item-container {
     margin-bottom: 10px;
   }
 }

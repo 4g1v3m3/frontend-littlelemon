@@ -6,19 +6,21 @@
   align-items: center;
   background-image: url("../assets/restaurant.jpg");
   background-repeat: no-repeat;
+  height: fit-content;
   background-size: cover;
+  height: 756px;
+
 }
 
 .confirmation-container {
+  margin: 25px;
+  justify-items: center;
   background-color: #495E57;
   display: grid;
-  gap: 20px;
   justify-content: center;
   color: #EDEFEE;
   font-size: 18pt;
-
-  width: fit-content;
-
+  border-radius: 2em;
 }
 
 .confirmation-header {
@@ -28,4 +30,21 @@
   color: #f4CE14;
   padding: 0px;
   margin-bottom: -10px;
+}
+
+.confirmation-p {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  text-indent: 1ch;
+}
+
+@media (max-width: 767px) {
+  .ConfirmedBooking {
+    height: auto;
+  }
+  .confirmation-p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
